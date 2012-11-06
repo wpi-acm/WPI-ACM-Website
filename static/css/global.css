@@ -1,0 +1,20 @@
+body {
+    padding-top: 40px;
+    min-width: 480px; }
+
+.logo {
+    height: 80px;
+    position: absolute;
+    margin-left: -80px;
+    top: 0;}
+
+.navbar .navbar-inner .container {
+    padding-left: 80px; }
+
+    .navbar .navbar-inner .container a.brand {
+        margin-left: 0px; }
+
+.join {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 60px 0 0;}
