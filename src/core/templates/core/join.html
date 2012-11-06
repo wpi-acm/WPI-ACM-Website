@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="row">
+  <h1 style="text-align: center;">Subscribe to our mailing list</h1>
+
+  <div class="span6">
+    <p>Join the the ACM chapter mailing list, and hear about events, meetings, discussions, and much more.</p>
+    
+    <p>To join the mailing list, email <span id="majordomoemail">majordomo@cs.wpi.edu</span> with an empty subject and with the body:</p>
+    <pre>subscribe acm-active</pre>
+    <p>If you have any problems, feel free to <a href="/contact">contact us</a>.
+</div>
+<div class="span6">
+  <img src="{{ STATIC_URL }}img/mailinglist.png" alt="ACM Logo">
+</div>
+
+</div>
+{% endblock %}

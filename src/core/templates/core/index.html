@@ -1,53 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>WPI ACM</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+{% extends "core/base.html" %}
 
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/global.css">
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css">
-    <!--<link href="css/bootstrap-responsive.css" rel="stylesheet">-->
+{% block content %}
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-  </head>
-
-  <body>
-
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <img class="logo" src="{{ STATIC_URL }}img/acm_chapter_sym-hires.png" alt="ACM Logo">
-          <a class="brand" href="#">WPI ACM</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Members</a></li>
-              <li><a href="#">Minutes</a></li>
-              <li><a href="#">Library</a></li>
-              <li><a href="#">Contest</a></li>
-            </ul>
-            <p class="navbar-text pull-right join"><a href="#">Join</a></p>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
       <div class="row">
         <div class="span12">
           <div id="acm-gallery" class="carousel slide">
@@ -63,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+  <div class="row">
         <div class="span9">
 
           <h2>News</h2>
@@ -98,26 +52,11 @@
             <li>Thursday at 7:00 PM in the ACM/GDC Lab (sub-basement of Fuller next to the Zoo Lab.)</li>
           </ul>
           <h2>Calendar</h2>
-          <img src="http://placekitten.com/940/500" alt="">
+          <iframe src="https://www.google.com/calendar/embed?showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&height=300&wkst=1&bgcolor=%23FFFFFF&src=achgl7e3m1pokdo8o1uqis70fk%40group.calendar.google.com&color=%23125A12&ctz=America%2FNew_York" style=" border-width:0 " width="220" height="300" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
-
-
-      <div class="footer">
-        Footer
+  <div class="footer">
+        
       </div>
 
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-      window.onload = function() {
-        $('.carousel').carousel();
-      }
-    </script>
-  </body>
-</html>
+{% endblock %}

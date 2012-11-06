@@ -5,4 +5,5 @@ from core.views import *
 
 urlpatterns = patterns('core.views',
     url(r'^$', TemplateView.as_view(template_name='core/index.html')),
+    url(r'^join$', TemplateView.as_view(template_name='core/join.html'))
 )
