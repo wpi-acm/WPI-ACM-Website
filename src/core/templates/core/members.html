@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+
+{% block content %}
+<div class="row">
+	<h1 style="text-align: center;">Members</h1>
+
+
+{% for year in officers %}
+<div>
+ 	<h2>{{ year.year }}</h2>
+
+ 	
+ 	<div style="font-size: 12px;">
+ 		{% for member in year.members %}
+ 		<div style="border: 1px black dotted; text-align: center; display: inline-block; width: 104px; padding: 2px;">
+ 			<img src="{{ STATIC_URL }}img/{{ member.photo }}" width="90" height="120">
+ 			<p style="margin: 0px;">{{ member.name }}</p>
+ 			<p style="color:#888;margin: 2px">{{ member.position }}</p>
+ 		</div>
+ 		{% endfor %}
+ 	</div>
+ 	
+ </div>
+ {% endfor %}
+
+
+</div>
+{% endblock %}
