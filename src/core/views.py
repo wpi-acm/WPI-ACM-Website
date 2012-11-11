@@ -20,16 +20,20 @@ ACMOfficers = [
 			'photo': "2011/marc.png"
 		},{
 			'name': "Taymon Beal",
-			'position': "?",
+			'position': "Lab Manager",
 			'photo': "2011/taymon.png"
 		},{
 			'name': "Thinh Nguyen",
-			'position': "?",
+			'position': "Secretary",
 			'photo': "2011/thinh.png"
 		},{
 			'name': "Michael Checca",
-			'position': "?",
+			'position': "Events Coordinator",
 			'photo': "2011/michael.png"
+		},{
+			'name': "Ian Naval",
+			'position': "Sys. Admin",
+			'photo': "2011/ian.png"
 		}]
 	},
 	{
