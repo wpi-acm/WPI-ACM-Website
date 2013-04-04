@@ -9,7 +9,7 @@
 
     <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/global.css">
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css">
+    {% block extrastyle %}{% endblock %}
     <!--<link href="css/bootstrap-responsive.css" rel="stylesheet">-->
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -34,18 +34,18 @@
           <div class="nav-collapse collapse">
             <a class="brand" href="/">WPI ACM</a>
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/members">Members</a></li>
-              <li><a href="#">Minutes</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li{% block nav-home %}{% endblock %}><a href="/">Home</a></li>
+              <li{% block nav-about %}{% endblock %}><a href="/about">About</a></li>
+              <li{% block nav-members %}{% endblock %}><a href="/members">Members</a></li>
+              <li{% block nav-minutes %}{% endblock %}><a href="#">Minutes</a></li>
+              <li{% block nav-contact %}{% endblock %}><a href="/contact">Contact</a></li>
             </ul>
             <p class="navbar-text pull-right join"><a href="join">Join</a></p>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="main container">
     {% block content %}{% endblock %}
     </div> <!-- /container -->
 

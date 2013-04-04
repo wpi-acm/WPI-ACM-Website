@@ -1,0 +1,16 @@
+.member {
+    border: 1px black dotted;
+    text-align: center;
+    display: inline-block;
+    width: 104px;
+    padding: 2px;
+}
+
+.member .name {
+    margin: 0px;
+}
+
+.member .position {
+    color: #888;
+    margin: 2px
+}
