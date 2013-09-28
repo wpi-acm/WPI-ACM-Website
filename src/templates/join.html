@@ -1,4 +1,4 @@
-{% extends "core/base.html" %}
+{% extends "base.html" %}
 
 {% block content %}
 <div class="row">
@@ -12,7 +12,7 @@
     <p>If you have any problems, feel free to <a href="/contact">contact us</a>.
 </div>
 <div class="span6">
-  <img src="{{ STATIC_URL }}img/mailinglist.png" alt="ACM Logo">
+  <img src="{{ url_for('static', filename='img/mailinglist.png') }}" alt="ACM Logo">
 </div>
 
 </div>

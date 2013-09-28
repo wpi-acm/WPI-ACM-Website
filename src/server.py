@@ -1,6 +1,7 @@
-# Create your views here.
-from django.shortcuts import render_to_response
-from django.template import RequestContext
+#!/usr/bin/env python
+from flask import Flask, render_template
+
+app = Flask(__name__)
 
 
 ACMOfficers = [
@@ -70,7 +71,30 @@ ACMOfficers = [
     }
 ]
 
+@app.route('/')
+def index():
+	return render_template('index.html')
 
 
-def members(request):
-    return render_to_response('core/members.html', {'officers': ACMOfficers}, context_instance=RequestContext(request))
+@app.route('/about')
+def about():
+	return render_template('about.html')
+
+
+@app.route('/members')
+def members():
+	return render_template('members.html', officers=ACMOfficers)
+
+
+@app.route('/contact')
+def contact():
+	return render_template('contact.html')
+
+
+@app.route('/join')
+def join():
+	return render_template('join.html')
+
+
+if __name__ == '__main__':
+	app.run(debug=True)

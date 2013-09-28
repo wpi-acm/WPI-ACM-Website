@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/global.css">
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/global.css') }}">
     {% block extrastyle %}{% endblock %}
     <!--<link href="css/bootstrap-responsive.css" rel="stylesheet">-->
 
@@ -30,15 +30,15 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <img class="logo" src="{{ STATIC_URL }}img/acmlogo.png" alt="ACM Logo">
+          <img class="logo" src="{{ url_for('static', filename='img/acmlogo.png') }}" alt="ACM Logo">
           <div class="nav-collapse collapse">
             <a class="brand" href="/">WPI ACM</a>
             <ul class="nav">
-              <li{% block nav-home %}{% endblock %}><a href="/">Home</a></li>
-              <li{% block nav-about %}{% endblock %}><a href="/about">About</a></li>
-              <li{% block nav-members %}{% endblock %}><a href="/members">Members</a></li>
-              <li{% block nav-minutes %}{% endblock %}><a href="#">Minutes</a></li>
-              <li{% block nav-contact %}{% endblock %}><a href="/contact">Contact</a></li>
+              <li><a href="{{ url_for('index') }}">Home</a></li>
+              <li><a href="{{ url_for('about') }}">About</a></li>
+              <li><a href="{{ url_for('members') }}">Members</a></li>
+              <li><a href="#">Minutes</a></li>
+              <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
             <p class="navbar-text pull-right join"><a href="join">Join</a></p>
           </div><!--/.nav-collapse -->
@@ -52,8 +52,8 @@
     <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     <script type="text/javascript">
       window.onload = function() {
         $('.carousel').carousel();
